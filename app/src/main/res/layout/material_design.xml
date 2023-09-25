@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="1dp">
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/elevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello world"
+            />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progress="50"/>
+        <!-- Circular progress indicator -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progress="50"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:layout_height="200dp"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="match_parent"
+                android:text="Hello world!"></TextView>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:text="Hello"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello world"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:checkedButton="@+id/radio_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="text1"/>
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="text2"/>
+            <RadioButton
+                android:id="@+id/radio_button_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="text3"/>
+        </RadioGroup>
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"  />
+
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:valueFrom="50.0"
+            android:valueTo="100.0"
+            android:stepSize="10.0"
+            />
+
+        <!-- Continuous slider -->
+        <com.google.android.material.slider.RangeSlider
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:values="@array/initial_slider_values"/>
+
+        <!-- Discrete slider -->
+        <com.google.android.material.slider.RangeSlider
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            android:stepSize="10.0"
+            app:values="@array/initial_slider_values"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

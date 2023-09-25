@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button">Кнопка</string>
+    <string name="name_edit_text">Имя</string>
+    <string name="password_edit_text">привет мир!</string>
+    <string name="checkbox_text">Запомнить меня</string>
+    <string name="forgot_password_text">Забыли пароль?</string>
+    <string name="sign_in_text">Войти</string>
+    <string name="no_account_text">Ещё не зарегистрированы?</string>
+    <string name="sign_up_text">Создать</string>
+</resources>

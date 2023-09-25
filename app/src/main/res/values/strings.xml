@@ -1,0 +1,11 @@
+<resources>
+    <string name="button">Button</string>
+    <string name="name_edit_text">Name</string>
+    <string name="password_edit_text">hello world!</string>
+    <string name="checkbox_text">Remember me</string>
+    <string name="forgot_password_text">Forgot password?</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="no_account_text">Don\'t have an account?</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="title_text" translatable="false">SoccerSkills</string>
+</resources>
