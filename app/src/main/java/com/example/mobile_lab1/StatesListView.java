@@ -11,7 +11,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class StatesListView extends AppCompatActivity {
-
     ArrayList<State> states = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,6 @@
 package com.example.mobile_lab1;
 
-public class CookbookItem {
+public class  CookbookItem {
     private int itemResource;
     private String itemName;
 

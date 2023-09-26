@@ -2,7 +2,9 @@ package com.example.mobile_lab1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -21,25 +23,26 @@ public class cookbook_list extends AppCompatActivity {
         setInitialData();
         ListView itemsListView = findViewById(R.id.cookbookItemsList);
         CookbookAdapter adapter = new CookbookAdapter(this,
-                R.layout.activity_cookbook_list, cookbookItems);
+                R.layout.activity_cookbook_item, cookbookItems);
 
         itemsListView.setAdapter(adapter);
 
-        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+        itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-                CookbookItem selectedState = (CookbookItem) adapterView.getItemAtPosition(pos);
-                Toast.makeText(getApplicationContext(), "Был выбран пункт " +
-                        selectedState.getItemName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), cookbook_list_info.class);
+                intent.putExtra("elementNumber", pos);
+                Log.d("Element position: ", String.valueOf(pos));
+                startActivity(intent);
             }
-        };
+        });
     }
 
     private void setInitialData() {
-        cookbookItems.add(new CookbookItem(R.drawable.borsch, "Борщ"));
-        cookbookItems.add(new CookbookItem(R.drawable.cesar, "Цезарь"));
-        cookbookItems.add(new CookbookItem(R.drawable.milkshake, "Мол. коктель"));
-        cookbookItems.add(new CookbookItem(R.drawable.blinchik, "Блинчики"));
-        cookbookItems.add(new CookbookItem(R.drawable.spagetti, "Спагетти"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_borsch, "Борщ"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_cesar, "Цезарь"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_milkshake, "Мол. коктель"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_blinchik, "Блинчики"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_spagetti, "Спагетти"));
     }
 }

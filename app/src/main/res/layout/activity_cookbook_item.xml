@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_constraintCircleRadius="10dp"
+    android:background="#333333"
     tools:context=".CookbookItem">
 
     <ImageView
@@ -11,7 +13,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop= "16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -27,6 +29,8 @@
         android:layout_marginRight="16dp"
         android:text="Country Name"
         android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_gravity="start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
