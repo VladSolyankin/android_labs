@@ -30,8 +30,13 @@ public class cookbook_list extends AppCompatActivity {
         itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                CookbookItem selectedItem = (CookbookItem) adapterView.getItemAtPosition(pos);
                 Intent intent = new Intent(getApplicationContext(), cookbook_list_info.class);
                 intent.putExtra("elementNumber", pos);
+                intent.putExtra("itemName", selectedItem.getItemName());
+                intent.putExtra("itemIcon", selectedItem.getItemResource());
+                intent.putExtra("itemDescription", selectedItem.getItemDescription());
+                intent.putExtra("itemInfoImage", selectedItem.getItemInfoImage());
                 Log.d("Element position: ", String.valueOf(pos));
                 startActivity(intent);
             }
@@ -39,10 +44,15 @@ public class cookbook_list extends AppCompatActivity {
     }
 
     private void setInitialData() {
-        cookbookItems.add(new CookbookItem(R.drawable.ic_borsch, "Борщ"));
-        cookbookItems.add(new CookbookItem(R.drawable.ic_cesar, "Цезарь"));
-        cookbookItems.add(new CookbookItem(R.drawable.ic_milkshake, "Мол. коктель"));
-        cookbookItems.add(new CookbookItem(R.drawable.ic_blinchik, "Блинчики"));
-        cookbookItems.add(new CookbookItem(R.drawable.ic_spagetti, "Спагетти"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_borsch, "Борщ",
+                R.drawable.borsch, "borsch.txt"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_cesar, "Цезарь",
+                R.drawable.cesar, "cesar.txt"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_milkshake, "Мол. коктель",
+                R.drawable.milkshake, "milkshake.txt"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_blinchik, "Блинчики",
+                R.drawable.blinchik, "blinchik.txt"));
+        cookbookItems.add(new CookbookItem(R.drawable.ic_spagetti, "Спагетти",
+                R.drawable.spagetti, "spagetti.txt"));
     }
 }
