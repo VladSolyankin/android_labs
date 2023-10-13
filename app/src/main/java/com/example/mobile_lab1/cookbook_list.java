@@ -54,5 +54,6 @@ public class cookbook_list extends AppCompatActivity {
                 R.drawable.blinchik, "blinchik.txt"));
         cookbookItems.add(new CookbookItem(R.drawable.ic_spagetti, "Спагетти",
                 R.drawable.spagetti, "spagetti.txt"));
+        cookbookItems.add(new CookbookItem(R.drawable.cat, "Кот", R.drawable.cat, "cesar.txt"));
     }
 }

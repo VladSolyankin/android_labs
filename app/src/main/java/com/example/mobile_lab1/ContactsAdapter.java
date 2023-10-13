@@ -17,7 +17,6 @@ public class ContactsAdapter extends
 
     private ArrayList<Contact> mContacts;
 
-    // Pass in the contact array into the constructor
     public ContactsAdapter(ArrayList<Contact> contacts) {
         mContacts = contacts;
     }
