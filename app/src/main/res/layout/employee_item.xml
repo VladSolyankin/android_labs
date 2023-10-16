@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="500dp"
-    android:layout_margin="5dp"
+    android:layout_margin="25dp"
     android:layout_marginBottom="15dp"
     android:elevation="10dp"
     android:background="@drawable/white_border"
@@ -19,7 +19,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/employeeImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -28,7 +28,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/employeeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -42,14 +42,15 @@
         android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteX="0dp">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="0dp"
@@ -60,14 +61,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/ratingTextView"
+                    android:gravity="center">
 
                 </TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:text="Рейтинг"
+                    android:gravity="center"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -82,14 +88,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/linesTextView"
+                    android:gravity="center">
 
                 </TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:text="Написано строк кода"
+                    android:gravity="center"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -104,14 +115,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/projectsTextView"
+                    android:gravity="center">
 
                 </TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:text="Проектов"
+                    android:gravity="center"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -128,7 +144,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:textSize="22sp">
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:id="@+id/teamTextView"
+                android:text="Команда: "
+                android:gravity="center|left"
+                android:paddingLeft="10dp">
 
             </TextView>
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -137,36 +158,33 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.70"
-                android:text="ПРОСМОТР"
                 android:gravity="center|left"
                 android:paddingLeft="20dp"
-                android:textSize="16sp"
+                android:text="ПРОСМОТР"
                 android:textColor="@color/red"
-                />
-
-
+                android:textSize="16sp"
+                android:onClick="onViewClick"/>
 
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_gravity="center"
                 android:layout_weight="0.15"
-                android:src="@drawable/convert"
-                android:layout_gravity="center"/>
+                android:src="@drawable/convert" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_gravity="center"
                 android:layout_weight="0.15"
-                android:src="@drawable/phone_icon"
-                android:layout_gravity="center"/>
+                android:src="@drawable/phone_icon" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

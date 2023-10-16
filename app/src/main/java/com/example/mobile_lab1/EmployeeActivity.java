@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,5 +25,24 @@ public class EmployeeActivity extends AppCompatActivity {
         rvContacts.setAdapter(adapter);
         rvContacts.setLayoutManager(new LinearLayoutManager(this));
 
+    }
+
+    public void onViewClick(View view) {
+        Intent intent = new Intent(this, EmployeeInfo.class);
+        TextView name = findViewById(R.id.employeeName);
+        TextView rating = findViewById(R.id.ratingTextView);
+        TextView projects = findViewById(R.id.projectsTextView);
+        TextView lines = findViewById(R.id.linesTextView);
+        TextView team = findViewById(R.id.teamTextView);
+
+        String information = "";
+        information += "Сотрудик: " + name.getText() + "\n";
+        information += "Рейтинг: " + rating.getText() + "\n";
+        information += "Проекты: " + projects.getText() + "\n";
+        information += "Строки кода: " + lines.getText() + "\n";
+        information += "Команда: " + team.getText() + "\n";
+
+        intent.putExtra("information", information);
+        startActivity(intent);
     }
 }

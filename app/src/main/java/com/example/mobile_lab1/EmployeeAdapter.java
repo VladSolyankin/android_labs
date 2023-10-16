@@ -1,11 +1,9 @@
 package com.example.mobile_lab1;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +37,15 @@ public class EmployeeAdapter extends
         textView.setText(currentEmployee.getName());
         ImageView imageView = holder.imageImageView;
         imageView.setImageResource(currentEmployee.getResource());
+
+        TextView ratingTextView = holder.ratingTextView;
+        ratingTextView.setText(String.valueOf(currentEmployee.getRating()));
+        TextView linesTextView = holder.linesTextView;
+        linesTextView.setText(String.valueOf(currentEmployee.getLines()));
+        TextView projectsTextView = holder.projectsTextView;
+        projectsTextView.setText(String.valueOf(currentEmployee.getProjects()));
+        TextView teamTextView = holder.teamTextView;
+        teamTextView.setText(currentEmployee.getTeam());
     }
 
     @Override
@@ -49,10 +56,19 @@ public class EmployeeAdapter extends
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView nameTextView;
         public ImageView imageImageView;
+        public TextView ratingTextView;
+        public TextView linesTextView;
+        public TextView projectsTextView;
+        public TextView teamTextView;
+
         public ViewHolder(View itemView) {
             super(itemView);
-            nameTextView = (TextView) itemView.findViewById(R.id.textView34);
-            imageImageView = (ImageView) itemView.findViewById(R.id.imageView18);
+            nameTextView = (TextView) itemView.findViewById(R.id.employeeName);
+            imageImageView = (ImageView) itemView.findViewById(R.id.employeeImage);
+            ratingTextView = (TextView) itemView.findViewById(R.id.ratingTextView);
+            linesTextView = (TextView) itemView.findViewById(R.id.linesTextView);
+            projectsTextView = (TextView) itemView.findViewById(R.id.projectsTextView);
+            teamTextView = (TextView) itemView.findViewById(R.id.teamTextView);
         }
     }
 }
