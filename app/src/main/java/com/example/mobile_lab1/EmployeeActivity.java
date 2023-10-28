@@ -43,6 +43,7 @@ public class EmployeeActivity extends AppCompatActivity {
         information += "Команда: " + team.getText() + "\n";
 
         intent.putExtra("information", information);
+        intent.putExtra("id", name.getText());
         startActivity(intent);
     }
 }

@@ -16,6 +16,8 @@ public class EmployeeInfo extends AppCompatActivity {
 
         String info = getIntent().getStringExtra("information");
         TextView employeeInfo = findViewById(R.id.employeeInfo);
+        TextView employeeTitle = findViewById(R.id.employeeTitle);
+        employeeTitle.setText(getIntent().getStringExtra("id") + " Information");
         employeeInfo.setText(info);
     }
 

@@ -70,9 +70,8 @@ public class Employee {
         this.resource = resource;
     }
 
-    private static int lastEmployeeId = 0;
-
     public static ArrayList<Employee> createEmployeeList(int employeeCount) {
+        int lastEmployeeId = 0;
         ArrayList<Integer> images = new ArrayList<>();
         ArrayList<String> teams = new ArrayList<>();
         images.add(R.drawable.milkshake);
@@ -86,7 +85,7 @@ public class Employee {
         ArrayList<Employee> employees = new ArrayList<>();
         for (int i = 0; i < employeeCount; i++) {
             employees.add(new Employee("Employee " + ++lastEmployeeId,
-                    images.get(i % 3), teams.get(i % 3), i,
+                    images.get(i % 3), "Команда: " + teams.get(i % 3), i,
                     i, i));
         }
         return employees;
