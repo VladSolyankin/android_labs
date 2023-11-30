@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth_main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_marginBottom="40dp"
+            >
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="130dp"
+                android:layout_height="114dp"
+                app:srcCompat="@drawable/soccer"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="109dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="210dp"
+                android:layout_height="55dp"
+                android:text="SoccerSkills"
+                android:textColor="@color/black"
+                android:textSize="16pt"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="154dp"
+                tools:layout_editor_absoluteY="141dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/img1"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="263dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="263dp"
+                tools:ignore="MissingConstraints"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="50dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/img3"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="329dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:text="test@mail.ru"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="329dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/img2"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="398dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/password1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="hello world!"
+                tools:layout_editor_absoluteX="125dp"
+                tools:layout_editor_absoluteY="480dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/img2"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="480dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="hello world!"
+                tools:layout_editor_absoluteX="125dp"
+                tools:layout_editor_absoluteY="397dp"
+                tools:ignore="MissingConstraints"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="Create"
+            android:textAllCaps="false"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="583dp"
+            android:onClick="onClick"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_signInButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Back"
+            android:textAllCaps="false"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="583dp"
+            />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:onClick="onClearDatabase"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

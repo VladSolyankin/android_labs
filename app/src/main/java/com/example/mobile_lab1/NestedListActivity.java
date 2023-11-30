@@ -23,9 +23,8 @@ public class NestedListActivity extends AppCompatActivity {
         nestedListGroup = NestedListGroup.createNestedList(3);
 
         NestedListAdapter adapter = new NestedListAdapter(nestedList);
+        NestedListGroupAdapter groupAdapter = new NestedListGroupAdapter(nestedListGroup);
         rvNestedList.setAdapter(adapter);
         rvNestedList.setLayoutManager(new LinearLayoutManager(this));
-
-
     }
 }

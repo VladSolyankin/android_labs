@@ -15,6 +15,9 @@ import java.util.ArrayList;
 public class NestedListGroupAdapter extends RecyclerView.Adapter<NestedListGroupAdapter.ViewHolder> {
 
     ArrayList<NestedListGroup> nestedListGroup;
+    public NestedListGroupAdapter(ArrayList<NestedListGroup> nestedListGroups) {
+        nestedListGroup = nestedListGroups;
+    }
     @NonNull
     @Override
     public NestedListGroupAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,7 +31,7 @@ public class NestedListGroupAdapter extends RecyclerView.Adapter<NestedListGroup
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         NestedListGroup group = nestedListGroup.get(position);
-        //отображение элементов во внутреннем списке
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

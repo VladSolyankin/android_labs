@@ -34,18 +34,18 @@ public class NestedListAdapter extends RecyclerView.Adapter<NestedListAdapter.Vi
         NestedList currentList = groups.get(position);
         TextView groupName = holder.groupName;
         groupName.setText(currentList.getGroupName());
-        NestedListGroup groupElements = holder.groupElements;
-        groupElements.setItemName("Example");
+        RecyclerView groupElements = holder.groupElements;
+        //groupElements.setAdapter(new NestedListGroupAdapter(new NestedListGroup()));
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView groupName;
-        NestedListGroup groupElements;
+        RecyclerView groupElements;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             groupName = itemView.findViewById(R.id.groupName);
-            groupElements = new NestedListGroup(0, "");
+            groupElements = new RecyclerView(itemView.getContext());
         }
     }
 
